@@ -1,0 +1,155 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page-bottom" style="display:{{cehua1?'block':'none'}};">
+   <block>
+      <view>
+        <scroll-view scroll-y style="height:300px;">
+          <view class="wc dianqi">
+            <text>电器设备</text>
+          </view>
+          <view class="room" wx:for="{{room}}" wx:key="{{index}}">
+              <view class="wc zhuwo" bindtap="dianji" data-index="{{index}}">
+                <text>{{item}}</text>
+                <button data-index="{{index}}" catchtap="shanchu" type="warn" size="mini" style="position:absolute;left:400rpx;">删除</button>
+              </view>
+          </view>
+        </scroll-view>
+      </view>
+    </block>
+  </view> 
+  <view class="page-bottom2" style="display:{{cehua2?'block':'none'}};">
+    <block>
+      <view class="page-content2">
+        <view class="wc2 yonghu">
+            <text>用户中心</text>
+        </view>
+        <view class="wc2 yonghuxinxi">
+            <image src="{{userInfoAvatar}}"></image>
+            <text>{{nickName}}</text>
+        </view>
+        <view class="wc2 weidu">
+            <image src="../images/xinxi.png"></image>
+            <text>我的未读消息</text>
+        </view>
+        <view class="wc2 plc">
+            <view class="zhanghu">
+               <image src="../images/yonghu.png"></image>
+               <text>账户管理</text>
+            </view>
+            <view class="shezhi" bindtap="changeTab">
+               <image src="../images/shezhi.png"></image>
+               <text>设置</text>
+            </view>
+        </view>
+        <view class="wc2 plc">
+          <view class="yijian">
+            <image src="../images/yijian.png"></image>
+            <text>意见反馈</text>
+            <button type="primary" open-type="contact">进入客服会话</button>
+          </view>
+          <view class="lianxi" bindtap="showModal">
+            <image src="../images/lianxi.png"></image>
+            <text>联系我们</text>
+          </view>
+        </view>
+      </view>
+      <form>
+        <button style="margin-left:180rpx;margin-top:140rpx;" type="warn" size="default" form-type="submit">退出</button>
+      </form>
+
+       <view class="mask">
+          <view  class="container-column buydes-dialog-container" wx:if="{{showModalStatus}}">    
+            <view class="container-column buydes-dialog-container-bottom" animation="{{animationData}}">  
+              <block>  
+                  <view bindtap="hideModal" class="buydes-dialog-container-bottom-item" ></view>
+                  <view class="view1">
+                    <view class="buydes-dialog-container-bottom-item" bindtap="hideModal">
+                      <text>拨打客服电话\n工作时间：08:00-17:00(周一至周六)</text> 
+                    </view>
+                    <view class="buydes-dialog-container-bottom-item" bindtap="hideModal2">
+                      <text>4001066609</text>
+                    </view>
+                  </view>
+                  <view class="view2">
+                      <view class="buydes-dialog-container-bottom-item" bindtap="hideModal">取消</view>  
+                  </view>
+              </block>  
+            </view>  
+        </view>  
+      </view>
+
+    </block>
+  </view>
+
+
+  <view class="page-top {{open?'c-state1':''}} {{open2?'c-state2':''}}">
+    <image class="btn" bindtap="tap_ch" src="../images/btn.png"></image>
+    <text class="keting">{{keting}}</text>
+    <image bindtap="tap_ch2" src="{{userInfoAvatar}}"></image>
+    <image class="didian" src="../images/didian.png"></image>
+    <text>{{dizhi}}</text>
+      <view class="shitu">
+          <view class="zhutu8"> 
+              <view class="power" bindtap="openOrClose">
+                <image src="{{img1}}"></image>
+              </view>
+              <view>
+                  <text>开机状态</text>
+                  <text>{{power}}</text>
+              </view>
+          </view>
+          <view class="zhutu2">
+            <text class="pm10">pm10</text>
+            <view>
+                    <text>{{kongqi1}}</text>
+                    <text>{{kongqi2}}</text>
+            </view>
+          </view>
+          <view class="zhutu7">
+            <text class="co2">co2</text>
+            <view>
+                    <text>CO2</text>
+                    <text>{{CO2}}</text>
+            </view>
+          </view>
+          <view class="zhutu3">
+            <text class="tem">℃</text>
+            <view>
+                    <text>室内/室外</text>
+                    <text>{{wendu1}}</text>
+            </view>
+          </view>
+          <view class="zhutu">
+            <text class="pm">pm2.5</text>
+            <view>
+                    <text>{{huanjing1}}</text>
+                    <text>{{huanjing2}}</text>
+            </view>
+          </view>
+          <view class="zhutu4">
+            <view class="shuidi" bindtap="changeFeng"><image src="../images/fengshan.png"></image></view>
+            <view>
+                    <text>风速</text>
+                    <text>{{fengsudang}}/{{fengsu}}</text>
+            </view>
+          </view>
+          <view class="zhutu5">
+            <view class="jiance" bindtap="shuaxin"><image src="../images/jiance.png"></image></view>
+            <view>
+                    <text>立即监测</text>
+                    <text>{{Mac_address}}</text>
+            </view>
+          </view>
+          <view class="zhutu6">
+            <image class="biaoqian" src="../images/biaoqian.png"></image>
+            <text class="maerdaifu">{{huanjing1}}</text>
+            <text class="num">{{huanjing2}}</text>
+            <image src="../images/message.png"></image>
+            <text class="fabu">{{shijian}}发布</text>
+          </view>
+          <view class="zhutu9" bindtap="fanhui">
+             <image src="../images/zhuwo@2x.png"></image>
+          </view>
+      </view>
+  </view>
+</view>

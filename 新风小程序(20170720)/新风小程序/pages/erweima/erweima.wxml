@@ -1,0 +1,7 @@
+<!--<view class="erweima">
+  <view>
+   <text>{{keting}}</text>
+   <image src="{{imgUrl}}"></image>
+   <text>扫描设备二维码，即可关注此设备</text>
+  </view>
+</view>-->

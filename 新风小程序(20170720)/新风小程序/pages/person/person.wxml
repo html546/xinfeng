@@ -1,0 +1,30 @@
+<!--pages/person/person.wxml-->
+<view class="container person">
+  <view class="group">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <input name="input" type="text" value="{{inp}}" confirm-type="down"/>
+      <text>快捷选名</text>
+        <section>
+          <button type="default" bindtap="changeinp" id="客厅">客厅</button>
+          <button type="default" bindtap="changeinp" id="卧室">卧室</button>
+          <button type="default" bindtap="changeinp" id="书房">书房</button>
+        </section>
+        <section>  
+          <button type="default" bindtap="changeinp" id="儿童房">儿童房</button>
+          <button type="default" bindtap="changeinp" id="主卧">主卧</button>
+          <button type="default" bindtap="changeinp" id="次卧">次卧</button>
+        </section>
+        <section> 
+          <button type="default" bindtap="changeinp" id="客房">客房</button>
+          <button type="default" bindtap="changeinp" id="老人房">老人房</button>
+          <button type="default" bindtap="changeinp" id="小客厅">小客厅</button>
+        </section>
+        <section>
+          <button form-type="submit">确定</button>
+          <button form-type="reset">重置</button>
+        </section>
+      </form>
+     </view>
+</view>
+
+

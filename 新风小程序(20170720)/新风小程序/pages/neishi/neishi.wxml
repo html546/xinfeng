@@ -1,0 +1,35 @@
+<!--pages/neishi/neishi.wxml-->
+<view class="container">
+    <view class="shebei">
+        <view class="shebei1" bindtap="saoyisao">
+           <image src="../images/saomiaoshebei@2x.png" mode="scaleToFill"></image>
+           <text>扫描设备</text>
+        </view>
+        <view class="shebei1" bindtap="bianji">
+           <image src="../images/bianjishebei@2x.png" mode="scaleToFill"></image>
+           <text>空气定制</text>
+        </view>
+        <view class="shebei1 shebei2" bindtap="changePage">
+           <image src="../images/bianjifangjian@2x.png" mode="scaleToFill"></image>
+           <text>绑定房间</text>
+        </view>
+    </view>
+  <scroll-view scroll-y style="height:950rpx;margin-left:36rpx;">
+    <view wx:for="{{rooms}}" wx:for-index="key" wx:for-item="item">
+      <view class="fangjian" bindtap="changeRoom1" data-id="{{item.id}}">
+        <view class="fangjian1">
+            <view class="fangjian1_left">
+              <image src="{{item.roomSrc}}"></image>
+              <text style="color:{{item.color}};">{{item.roomName}}</text>
+              <switch data-id="{{item.id}}" name="key" catchtap="huadong" color="#2dafe9" type="switch" checked="{{item.checked}}"/>
+            </view>
+            <view catchtap="refresh" class="fangjian1_right" data-id="{{item.id}}">
+              <image src="{{item.refreshSrc}}"></image>
+              <text style="color:{{item.color}};">刷新</text>
+              <text>PM2.5  <text class="fangjian1_text" style="font-size:50rpx;">{{item.size}}</text></text>
+            </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

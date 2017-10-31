@@ -1,0 +1,41 @@
+<view class="container2">
+    <form bindsubmit="formSubmit">
+      <view class="zhuwo">
+        <text class="huanjing">以下环境电器将使用本设备的环境数据</text>
+        <view>
+          <block>
+            <picker class="zhuwocon" bindchange="bindPickerChange" value="{{index}}" range="{{array}}"> 
+              <text>
+                  <input name="input" value="{{array[index]}}"/>{{array[index]}}
+              </text>
+              <image src="../images/arrowright.png"></image>
+            </picker>
+          </block>
+        </view>
+      </view>
+      <view class="tiaojiecon">
+        <text>自动调节空气质量</text>
+        <switch name="switch1" type="switch" checked='checked' color="#5FC3F7" />
+      </view>
+      <view class="youhua">
+        <text class="youhua2">根据您的需要设定空气优化目标</text>
+        <view class="youhuatar" wx:for="{{modal}}" wx:key="{{index}}">
+          <block>
+            <view class="maer maer2" bindtap="changeModel" id="{{item.id}}" data-index="{{index}}">
+              <view wx:if="{{userCellId==index?true:false}}" style="float:left;">
+                  <input hidden="true" name='icon' value="{{userCellId}}"/>
+                  <icon type="success_no_circle" color="#5fc3f7" size="20"/>
+              </view>
+              <text>{{item.dizhi}}</text>
+              <icon type="info" color="#5fc3f7" size="20"/>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="yejian">
+        <text>夜间自动调整为夜间模式</text>
+        <switch name="switch2" type="switch" checked='checked' color="#5FC3F7"/>
+      </view>
+      <button style="margin-top:20rpx;" form-type="submit">提交</button>
+    </form>
+</view>

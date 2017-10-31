@@ -1,0 +1,31 @@
+/* pages/erweima/erweima.wxss */
+page{
+  background: #EDEDED;
+}
+.erweima{
+  width: 450rpx;
+  height: 600rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 90rpx;
+  text-align: center;
+}
+.erweima view{
+  display: flex;
+  flex-direction: column;
+}
+.erweima view image{
+  width: 280rpx;
+  height: 280rpx;
+  margin-left: 85rpx;
+}
+.erweima view text:first-child{
+  margin-top: 20rpx;
+}
+.erweima view image:nth-child(2){
+  margin-top: 60rpx;
+}
+.erweima view text:last-child{
+  margin-top: 60rpx;
+  font-size: 24rpx
+}

@@ -1,0 +1,15 @@
+<!--pages/bangding/bangding.wxml-->
+<view class="container person">
+  <view class="group">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <input name="input" type="text" value="{{inp}}" bindinput="jianpan" placeholder="请输入你的设备的序列号" confirm-type="down"/>
+      <text>快捷选名</text>
+        <section>
+          <button bindtap="changeinp" wx:for="{{room}}" id="{{item}}">{{item}}</button>
+        </section>
+        <section>
+          <button form-type="submit">绑定</button>
+        </section>
+      </form>
+     </view>
+</view>

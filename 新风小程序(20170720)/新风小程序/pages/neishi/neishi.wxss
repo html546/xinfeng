@@ -1,0 +1,87 @@
+/* pages/neishi/neishi.wxss */
+.shebei{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.shebei1{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 30rpx;
+}
+.shebei>.shebei1{
+  margin-right: 80rpx;
+}
+.shebei>.shebei2{
+  margin-right: 0rpx;
+}
+.shebei1>image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -25rpx;
+}
+.shebei1>text{
+  text-align: center;
+  margin-top: 25rpx;
+}
+.fangjian{
+  display: flex;
+  flex-direction: column;
+}
+
+.fangjian1{
+  width: 715rpx;
+  height: 300rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.fangjian1_left{
+  margin-top: 60rpx;
+  margin-left: 125rpx;
+}
+.fangjian1_right{
+  margin-top: 60rpx;
+  margin-right: 125rpx;
+}
+.fangjian1_left text{
+  margin-top: 15rpx;
+}
+.fangjian1_right>text:nth-child(2){
+  margin-top: 15rpx;
+  text-align: center;
+}
+.fangjian1_right>text:nth-child(3){
+  margin-top: 36rpx;
+  color: #aaa;
+}
+.fangjian1_right>text:nth-child(3) text{
+  color: #333;
+}
+.fangjian1_left,.fangjian1_right{
+  display: flex;
+  flex-direction: column;
+  /*color: #2eb0ea;*/
+}
+.fangjian1_left>image,.fangjian1_right>image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -25rpx;
+}
+.fangjian1_left>switch:nth-child(3){
+  width: 100rpx;
+  height: 45rpx;
+  margin-top: 40rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -50rpx;
+}

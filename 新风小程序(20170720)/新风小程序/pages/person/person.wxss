@@ -1,0 +1,35 @@
+/* pages/person/person.wxss */
+.person input{
+  background:#fff;
+  border-radius:8rpx;
+  margin-top:75rpx;
+  padding: .2rem 1rem;
+  width:14rem;
+}
+.person text{
+  color:#fff;
+  padding:20rpx 0rpx 0rpx;
+  font-size:32rpx;
+}
+.group{
+  flex-wrap: wrap;
+  background:#2dafe9;
+  padding: 15rpx 0rpx 20rpx;
+}
+.group>form section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.group>form section button{
+  background-color: #FEAA85;
+  color: #fff;
+  margin-left: 0;
+  margin-right: 0;
+  width:180rpx;
+  height:90rpx;
+}
+.group>form section button:nth-child(2){
+  margin: 0rpx 20rpx 0rpx 20rpx;
+}

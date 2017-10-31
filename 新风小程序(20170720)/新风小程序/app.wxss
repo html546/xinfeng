@@ -1,0 +1,13 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #2dafe9;
+  font-family: "微软雅黑";
+  width: 100%;
+} 

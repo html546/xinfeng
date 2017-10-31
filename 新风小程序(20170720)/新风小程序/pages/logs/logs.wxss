@@ -1,0 +1,17 @@
+.fuwu{
+  width:100%;
+  height:auto;
+  text-align:center;
+  padding-top:80rpx;
+  color:#fff;
+}
+.fuwu text:nth-child(2){
+  font-size: 100rpx;
+  position: relative;
+  top: 100rpx;
+}
+.fuwu input:nth-child(3){
+  font-size: 32rpx;
+  position: relative;
+  top: 120rpx;
+}

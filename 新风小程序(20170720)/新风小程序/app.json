@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/neishi/neishi",
+    "pages/bangding/bangding",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/dingzhi/dingzhi",
+    "pages/person/person" 
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "主页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#256193",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "设备参数",
+        "iconPath": "pages/images/canshu.png",
+        "selectedIconPath": "pages/images/selectedCanshu.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "地理定位",
+        "iconPath": "pages/images/dingwei.png",
+        "selectedIconPath": "pages/images/selectedDingwei.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "房间设置",
+        "iconPath": "pages/images/room.png",
+        "selectedIconPath": "pages/images/selectedRoom.png"
+      },
+      {
+        "pagePath": "pages/dingzhi/dingzhi",
+        "text": "空气定制",
+        "iconPath": "pages/images/jiahao.png",
+        "selectedIconPath": "pages/images/selectJiaohao.png"
+      },
+      {
+        "pagePath":"pages/bangding/bangding",
+        "text":"绑定房间",
+        "iconPath":"pages/images/bangding.png",
+        "selectedIconPath":"pages/images/selectBangding.png"
+      }
+    ]
+  }
+}

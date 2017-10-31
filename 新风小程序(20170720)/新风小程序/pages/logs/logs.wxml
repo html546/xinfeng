@@ -1,0 +1,12 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="fuwu">
+    <text>需要您的位置以提供售后服务\n</text>
+    <text>{{city}}\n</text>
+    <input confirm-type="done" focus="true" value="{{address}}" type="text" name="address"/>
+    <button form-type="submit" type="default" size="default" plain="true" style="color:#fff;border:1px solid #fff;position:relative;top:240rpx;width:550rpx;">手动输入提交</button>
+    <button type="default" size="default" style="color#fff;background:#2FB5FC;width:550rpx;position:relative;top:260rpx;" bindtap="changeTab">下一步</button>
+    </view>
+  </form>
+</view>
+
